@@ -1,1 +1,6 @@
 En este capítulo veremos cómo usar GitHub para alojar repositorios en remoto.
+
+echo "Capítulo 5: Conceptos avanzados" >> indice.txt
+git add .
+git commit -m "Añadido capítulo 5 al índice."
+git annotate indice.txt
