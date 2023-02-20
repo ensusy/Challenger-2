@@ -1,0 +1,14 @@
+#!/bin/bash
+chmod +x 2-mysql.sh
+
+# Inicia el contenedor de MySQL
+docker run --name=db -p 3306:3306 -e MYSQL_ROOT_PASSWORD=secret-pw -d mysql:8
+$PWD/mysql-data:/var/lib/mysql \
+mysql:latest
+
+# Inicia el contenedor de PHPMyAdmin y conecta con MySQL
+docker run --name=my-admin -p 82:80 --link db:db -d phpmyadmin
+phpmyadmin/phpmyadmin:latest
+echo " Fin"
+
+
