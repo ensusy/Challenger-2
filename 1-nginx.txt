@@ -1,0 +1,8 @@
+#!/bin/bash
+chmod +x 1-nginx.sh
+docker pull nginx:1.22
+echo " Instalando nginx"
+image=$1
+echo "Primer Ejercicio"
+docker pull $image 3f8a00f137a0
+echo "FIN"
